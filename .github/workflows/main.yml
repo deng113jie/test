@@ -27,6 +27,9 @@ jobs:
       - uses: actions/setup-python@v2
         with:
          python-version: '3.7'
+      - name: sysname
+        run:
+         python -c "import os; print(os.name)"
       - name: pip install
         run:
          pip install build cython
