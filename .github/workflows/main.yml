@@ -32,7 +32,7 @@ jobs:
          python -c "import os; print(os.name)"
       - name: pip install
         run:
-         pip install build cython
+         pip install build cython wheel
       - name: build
         run: python setup.py bdist_wheel
       
