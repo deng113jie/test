@@ -34,5 +34,5 @@ jobs:
         run:
          pip install build cython
       - name: build
-        run: python -m build
+        run: python setup.py bdist-wheel
       
