@@ -24,6 +24,14 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: pbuild
-        run: python -m build
+      - uses: actions/setup-python@v2
+        with:
+         python-version: '3.7'
+         
+      - name: pip install
+      - run:
+         pip install build, cython
+      
+      - name: build
+      - run: python -m build
       
